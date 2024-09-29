@@ -15,6 +15,10 @@ itemsInput.addEventListener('keydown', function(event) {
 
         itemsInput.value = '';
     }
+
+    item.addEventListener('click', function() {
+        item.classList.toggle("done")
+    });
 });
 
 
