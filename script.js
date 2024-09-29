@@ -3,20 +3,20 @@
 const itemsContainer = document.querySelector("#items");
 const itemsInput = document.querySelector("#input");
 
-itemsContainer.addEventListener('keydown', function() {
+itemsInput.addEventListener('keydown', function(event) {
     const itemText = itemsInput.value;
-    var keyCode = event.keyCode;
 
     const newItem = document.createElement('div');
-    newItem.classList.toggle("done");
+    newItem.classList.add("item");
     newItem.textContent = itemText;
 
-    if (itemText != '' && keyCode == Enter) {
+    if (itemText != '' && event.key == 'Enter') {
         itemsContainer.append(newItem);
 
         itemsInput.value = '';
     }
 });
+
 
 /* Пустые элементы не должны добавляться */
 
