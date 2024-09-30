@@ -1,5 +1,3 @@
-/* Новые элементы должны добавляться в список по нажатию на Enter */
-
 const itemsContainer = document.querySelector("#items");
 const itemsInput = document.querySelector("#input");
 
@@ -16,11 +14,12 @@ itemsInput.addEventListener('keydown', function(event) {
         itemsInput.value = '';
     }
 
-    item.addEventListener('click', function() {
-        item.classList.toggle("done")
+    newItem.addEventListener('click', function() {
+        newItem.classList.toggle("done")
     });
 });
 
+/* Новые элементы должны добавляться в список по нажатию на Enter */
 
 /* Пустые элементы не должны добавляться */
 
